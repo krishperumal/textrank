@@ -43,6 +43,23 @@ build the JAR for export to another project:
 
 ---------
 
+----------------------
+@author Krish Perumal
+----------------------
+Added function for getting top k keyphrases given an input file and value of 'k'.
+
+Sample code to access the same (to extract top 10 keyphrases from file test.txt):
+
+String[] keyphrases = TextRank.getTopKKeyphrases("test.txt", 10);
+for (int i=0; i<keyphrases.length; i++) {
+	System.out.println(keyphrases[i]);
+}
+
+PS: Add 'resources' directory to top level of the project on which you need this functionality.
+
+Contact: Krish Perumal (krishperumal11@gmail.com, krishperumal.com)
+----------------------------------------------
+
 Sources for third-party JAR files:
 
 commons-logging-1.1.1.jar
