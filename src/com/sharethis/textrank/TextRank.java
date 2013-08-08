@@ -457,7 +457,7 @@ public class
     public static String[] getTopKKeyphrases(String inputFile, int k) throws Exception {
         final String text = IOUtils.readFile(inputFile);
         boolean use_wordnet = true;
-        final TextRank tr = new TextRank("resources", "en");
+        final TextRank tr = new TextRank("res", "en");
         tr.prepCall(text, use_wordnet);
         final FutureTask<Collection<MetricVector>> task = new FutureTask<Collection<MetricVector>>(tr);
         Collection<MetricVector> answer = null;
